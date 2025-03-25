@@ -1,78 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyra Health</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reddit Messenger</title>
+  <style>
+    /* Reset some basic elements */
+    body, h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    header {
+      background: #ff4500;
+      color: #fff;
+      padding-top: 30px;
+      min-height: 70px;
+      border-bottom: #ccc 1px solid;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    nav {
+      float: right;
+      margin-top: 10px;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-left: 5px;
+    }
+
+    .showcase {
+      min-height: 400px;
+      background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+      text-align: center;
+      color: #fff;
+    }
+
+    .showcase h1 {
+      margin-top: 100px;
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    .showcase p {
+      font-size: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      font-size: 18px;
+      color: #fff;
+      background: #ff4500;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background: #e03e00;
+    }
+
+    .features {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .feature-box {
+      flex: 1;
+      padding: 20px;
+      background: #fff;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .feature-box i {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .showcase h1 {
+        font-size: 40px;
+        margin-top: 50px;
+      }
+
+      .showcase p {
+        font-size: 18px;
+      }
+
+      .features {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-<!-- Hero Section -->
-<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-purple-500">
-    <div class="container mx-auto text-center px-6">
-        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Kyra Health</h1>
-        <p class="text-xl md:text-2xl text-white mb-10">Transforming Employee Health Benefits with AI-Powered ICHRA Solutions.</p>
-        <button @click="document.getElementById('signup').scrollIntoView({behavior: 'smooth'})"
-                class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300">
-            Request a Demo
-        </button>
+<body>
+  <header>
+    <div class="container">
+      <h1>Reddit Messenger</h1>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-</section>
+  </header>
 
-<!-- Features Section -->
-<section class="py-16 container mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-12">Why Kyra Health?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div class="text-center">
-            <div class="text-5xl mb-4">🚀</div>
-            <h3 class="text-2xl font-semibold mb-2">Fast Implementation</h3>
-            <p>Seamlessly integrates with your existing systems to quickly unlock savings.</p>
-        </div>
-        <div class="text-center">
-            <div class="text-5xl mb-4">💡</div>
-            <h3 class="text-2xl font-semibold mb-2">AI-Driven Choices</h3>
-            <p>Personalized health plan recommendations powered by AI for better employee experiences.</p>
-        </div>
-        <div class="text-center">
-            <div class="text-5xl mb-4">📈</div>
-            <h3 class="text-2xl font-semibold mb-2">Cost Efficiency</h3>
-            <p>Optimize your employee benefits spend with targeted, efficient strategies.</p>
-        </div>
+  <section class="showcase">
+    <div class="container">
+      <h1>Connect with Reddit Communities Instantly</h1>
+      <p>Experience seamless communication with your favorite Reddit communities through Reddit Messenger.</p>
+      <a href="#download" class="button">Download Now</a>
     </div>
-</section>
+  </section>
 
-<!-- Testimonial Section -->
-<section class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="text-xl italic mb-4">"Kyra Health's platform simplified our transition to ICHRA. Our employees love the personalized support, and we're seeing significant cost savings."</p>
-            <p class="font-semibold">– Alex Jordan, VP of Operations</p>
-        </div>
+  <section id="features" class="container">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>Real-time Messaging</h3>
+        <p>Engage in live conversations with Reddit users and communities.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Community Integration</h3>
+        <p>Seamlessly connect with your favorite subreddits and stay updated.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Secure & Private</h3>
+        <p>Enjoy end-to-end encryption for all your messages and data.</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- CTA Section -->
-<section id="signup" class="py-16">
-    <div class="container mx-auto text-center px-6">
-        <h2 class="text-4xl font-bold mb-8">Ready to Learn More?</h2>
-        <form class="max-w-lg mx-auto" action="#" method="POST">
-            <input type="email" placeholder="Enter your email"
-                   class="w-full px-4 py-3 rounded-full border border-gray-300 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400">
-            <button type="submit"
-                    class="w-full bg-blue-600 text-white px-4 py-3 rounded-full hover:bg-blue-700 transition duration-300">
-                Get Early Access
-            </button>
-        </form>
-    </div>
-</section>
+  <section id="download" class="container">
+    <h2>Download Reddit Messenger</h2>
+    <p>Choose your platform and start connecting today.</p>
+    <a href="#" class="button">Download for iOS</a>
+    <a href="#" class="button">Download for Android</a>
+  </section>
 
-<!-- Footer -->
-<footer class="bg-gray-800 py-6 text-center text-white">
-    <p>&copy; 2025 Kyra Health. All rights reserved.</p>
-</footer>
-
+  <footer id="contact">
+    <p>Contact Us: support@redditmessenger.com</p>
+    <p>&copy; 2025 Reddit Messenger. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
